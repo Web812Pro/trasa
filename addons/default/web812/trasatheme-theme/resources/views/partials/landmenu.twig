@@ -1,0 +1,39 @@
+<div class="pt-5 bg-opaque mask" id="speakers">
+  <div class="container-fluid">
+    {# <div class="row">
+      <div class="col-md-12">
+        <h1 class="mb-4">Speakers</h1>
+      </div>
+    </div> #}
+    <div class="row">
+
+      {# <ul>
+          {% for catalogue in entries('pages', 'pages').where({'parent_id': 16}).get() %}
+          <li>
+              <p>{{ catalogue.title }}</p>
+          </li>
+          {% endfor %}
+      </ul> #}
+      {% for catalogue in entries('pages', 'pages').where({'parent_id': 16}).get() %}
+        <div class="col-md-4 col-6">
+          <a href="{{ url(catalogue.path) }}">
+            <img src="{{ catalogue.kartinka_kataloga.url }}" class="center-block img-fluid my-3 rounded-circle">
+            <h3>{{ catalogue.title }}</h3>
+            <p class="text-gray-dark">{{ catalogue.parent.title }}</p>
+          </a>
+        </div>
+      {% endfor %}
+
+      {% for catalogue in entries('pages', 'pages').where({'parent_id': 8}).get() %}
+        <div class="col-md-4 col-6">
+          <a href="{{ url(catalogue.path) }}">
+            <img src="{{ catalogue.kartinka_kataloga.url }}" class="center-block img-fluid my-3 rounded-circle">
+            <h3>{{ catalogue.title }}</h3>
+            <p class="text-gray-dark">{{ catalogue.parent.title }}</p>
+          </a>
+        </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+</div>

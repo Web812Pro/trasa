@@ -1,0 +1,16 @@
+<!-- jQuery -->
+{{ asset_add("theme.js", "theme::js/vendor/jquery-3.1.1.min.js") }}
+{{ asset_add("theme.js", "theme::js/vendor/tether.min.js") }}
+<!-- Bootstrap Core JavaScript -->
+{{ asset_add("theme.js", "theme::js/vendor/bootstrap-4.0.0-alpha.6.min.js") }}
+<!-- Theme JavaScript -->
+{{ asset_add("theme.js", "theme::js/theme/navbar-cover.js") }}
+{{ asset_add("theme.js", "theme::js/theme/smooth-scroll.js") }}
+
+{{ asset_script("theme.js", ["min"]) }}
+{# {{ html_script(asset_path("theme.js", ["min"])) }} #}
+
+{# Include Scripts Loaded From Outside #}
+{% for script in asset_scripts("scripts.js") %}
+    {{ script|raw }}
+{% endfor %}

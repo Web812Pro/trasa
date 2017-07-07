@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-md fixed-top bg-primary navbar-light">
+  
+  <div class="container">
+    <a class="navbar-brand mx-auto" href="{{ url("/") }}">
+      {{ image("theme::img/logo.svg").height("100")|raw }}
+    </a>  
+  
+
+    <button 
+      class="navbar-toggler navbar-toggler-right"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar2SupportedContent"
+      aria-controls="navbar2SupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbar2SupportedContent"
+    >      
+      {{ structure()
+            .linkAttributesDropdown({'data-toggle': 'dropdown'})
+            .listClass('navbar-nav')
+            .itemClass('nav-item')
+            .linkClass('nav-link')
+            .childListClass('dropdown-menu')
+            .render()|raw }}
+      {# <a class="mx-3 btn navbar-btn btn-info" href="#register">Register now</a> #}
+    </div>
+  </div>
+</nav>

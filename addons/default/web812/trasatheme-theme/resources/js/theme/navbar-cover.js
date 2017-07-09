@@ -28,7 +28,7 @@
 		if (scroll > 15)
 			unstyle(document.querySelector(".navbar.fixed-top"));
 		else
-			style(document.querySelector(".navbar.fixed-top")); 
-			
+			style(document.querySelector(".navbar.fixed-top"));
+
 	})
 })();

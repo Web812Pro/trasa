@@ -7,13 +7,17 @@
     </div> #}
     <div class="row">
 
-      {# <ul>
-          {% for catalogue in entries('pages', 'pages').where({'parent_id': 16}).get() %}
-          <li>
-              <p>{{ catalogue.title }}</p>
-          </li>
-          {% endfor %}
-      </ul> #}
+      {% for catalogue in entries('pages', 'pages').where({'parent_id': 17}).get() %}
+        <div class="col-md-4 col-6">
+          <a href="{{ url(catalogue.path) }}">
+            <img src="{{ catalogue.kartinka_kataloga.url }}" class="center-block img-fluid my-3">
+            <h3>{{ catalogue.title }}</h3>
+            <p class="text-gray-dark">{{ catalogue.parent.title }}</p>
+          </a>
+        </div>
+        
+      {% endfor %}
+
       {% for catalogue in entries('pages', 'pages').where({'parent_id': 16}).get() %}
         <div class="col-md-4 col-6">
           <a href="{{ url(catalogue.path) }}">
@@ -24,7 +28,7 @@
         </div>
       {% endfor %}
 
-      {% for catalogue in entries('pages', 'pages').where({'parent_id': 8}).get() %}
+      {% for catalogue in entries('pages', 'pages').where({'parent_id': 24}).get() %}
         <div class="col-md-4 col-6">
           <a href="{{ url(catalogue.path) }}">
             <img src="{{ catalogue.kartinka_kataloga.url }}" class="center-block img-fluid my-3 rounded-circle">
@@ -33,7 +37,7 @@
           </a>
         </div>
       {% endfor %}
-      
+
     </div>
   </div>
 </div>

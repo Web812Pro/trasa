@@ -1,5 +1,6 @@
 .env
 .coverage
+.ftpconfig
 composer.lock
 /bin
 /core

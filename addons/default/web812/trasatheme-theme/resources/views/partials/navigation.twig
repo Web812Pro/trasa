@@ -1,12 +1,11 @@
 <nav class="navbar navbar-expand-md fixed-top bg-primary navbar-light">
-  
   <div class="container">
-    <a class="navbar-brand mx-auto" href="{{ url("/") }}">
-      {{ image("theme::img/logo.svg").height("100")|raw }}
-    </a>  
-  
 
-    <button 
+      <a class="navbar-brand mx-auto" href="{{ url("/") }}">
+        {{ image("theme::img/logo.svg").height("100")|raw }}
+      </a>
+
+    <button
       class="navbar-toggler navbar-toggler-right"
       type="button"
       data-toggle="collapse"
@@ -21,7 +20,7 @@
     <div
       class="collapse navbar-collapse justify-content-center"
       id="navbar2SupportedContent"
-    >      
+    >
       {{ structure()
             .linkAttributesDropdown({'data-toggle': 'dropdown'})
             .listClass('navbar-nav')
@@ -31,5 +30,11 @@
             .render()|raw }}
       {# <a class="mx-3 btn navbar-btn btn-info" href="#register">Register now</a> #}
     </div>
+    <div class="navbar-nav navbar-brand">
+      <p>
+        123-12-22
+      </p>
+    </div>
+
   </div>
 </nav>
